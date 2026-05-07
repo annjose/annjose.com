@@ -19,7 +19,8 @@ export default async () => {
       type: "div",
       props: {
         style: {
-          background: "#fefbfb",
+          background:
+            "linear-gradient(135deg, #fbfafc 0%, #fbf0fb 58%, #fff7ed 100%)",
           fontFamily,
           width: "100%",
           height: "100%",
@@ -33,7 +34,7 @@ export default async () => {
             props: {
               style: {
                 border: "2px solid #eadceb",
-                background: "#fefbfb",
+                background: "rgba(251, 250, 252, 0.88)",
                 borderRadius: "28px",
                 display: "flex",
                 justifyContent: "center",
@@ -126,12 +127,20 @@ export default async () => {
                             },
                           },
                           {
-                            type: "p",
+                            type: "div",
                             props: {
                               style: {
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                alignSelf: "flex-start",
                                 margin: "72px 0 0",
-                                color: "#625967",
-                                fontSize: 28,
+                                padding: "10px 16px",
+                                border: "1px solid #e8cce9",
+                                borderRadius: "9999px",
+                                background: "#fbf0fb",
+                                color: "#4f4654",
+                                fontSize: 30,
                                 fontWeight: 700,
                               },
                               children: new URL(SITE.website).hostname,
