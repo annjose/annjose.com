@@ -12,7 +12,10 @@ const posts = await getCollection("blog");
 
 <Layout title={`Tags | ${SITE.title}`}>
   <Header />
-  <Main pageTitle="Tags" pageDesc="Browse posts by topic.">
+  <Main
+    pageTitle="Tags"
+    pageDesc="Browse posts by topic, project, and learning thread."
+  >
     <TagCloud posts={posts} />
   </Main>
   <Footer />
