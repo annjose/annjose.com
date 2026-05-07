@@ -5,7 +5,7 @@ pubDatetime: 2024-06-12T03:14:23.000Z
 draft: false
 tags:
   - "ai"
-  - "llm"
+  - "conferences"
 author: "Ann Catherine Jose"
 disqusSlug: "apple-intelligence"
 ---

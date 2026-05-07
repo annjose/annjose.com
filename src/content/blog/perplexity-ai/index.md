@@ -6,6 +6,7 @@ draft: false
 tags:
   - "ai"
   - "llm"
+  - "tinkering"
 author: "Ann Catherine Jose"
 disqusSlug: "perplexity-ai"
 ogImage: "perplexity-ai-library.jpeg"

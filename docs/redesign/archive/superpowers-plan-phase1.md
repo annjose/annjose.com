@@ -1286,8 +1286,8 @@ describe("getTagLabel", () => {
     expect(getTagLabel("personal-growth")).toBe("personal-growth");
   });
 
-  it("returns label for rag", () => {
-    expect(getTagLabel("rag")).toBe("RAG");
+  it("returns label for llm", () => {
+    expect(getTagLabel("llm")).toBe("LLM");
   });
 });
 ```

@@ -8,6 +8,7 @@ tags:
   - "ai"
   - "on-device-ai"
   - "edge-ai"
+  - "gemma"
 author: "Ann Catherine Jose"
 disqusSlug: "mobile-on-device-ai"
 ---

@@ -5,13 +5,15 @@ describe("getTagLabel", () => {
   it("returns uppercase for known acronyms", () => {
     expect(getTagLabel("llm")).toBe("LLM");
     expect(getTagLabel("ai")).toBe("AI");
-    expect(getTagLabel("rag")).toBe("RAG");
-    expect(getTagLabel("tdd")).toBe("TDD");
     expect(getTagLabel("ios")).toBe("iOS");
-    expect(getTagLabel("c++")).toBe("C++");
-    expect(getTagLabel("graphql")).toBe("GraphQL");
+    expect(getTagLabel("new-beginning")).toBe("New Beginning");
     expect(getTagLabel("chatgpt")).toBe("ChatGPT");
     expect(getTagLabel("next-js")).toBe("Next.js");
+  });
+
+  it("uses sentence-style casing for explicit hyphenated labels", () => {
+    expect(getTagLabel("how-to")).toBe("How-to");
+    expect(getTagLabel("on-device-ai")).toBe("On-device AI");
   });
 
   it("auto-title-cases unknown slugs", () => {

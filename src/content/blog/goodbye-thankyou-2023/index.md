@@ -6,6 +6,7 @@ draft: false
 tags:
   - "personal-growth"
   - "career"
+  - "thinking-loud"
 author: "Ann Catherine Jose"
 disqusSlug: "goodbye-thankyou-2023"
 ---

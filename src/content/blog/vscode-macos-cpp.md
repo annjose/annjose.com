@@ -5,7 +5,7 @@ pubDatetime: 2020-06-30T05:32:55.000Z
 draft: false
 tags:
   - "how-to"
-  - "c++"
+  - "tinkering"
 author: "Ann Catherine Jose"
 disqusSlug: "vscode-macos-cpp"
 ---

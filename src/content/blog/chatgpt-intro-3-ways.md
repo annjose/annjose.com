@@ -7,6 +7,7 @@ tags:
   - "chatgpt"
   - "ai"
   - "llm"
+  - "tinkering"
 author: "Ann Catherine Jose"
 disqusSlug: "chatgpt-intro-3-ways"
 ---

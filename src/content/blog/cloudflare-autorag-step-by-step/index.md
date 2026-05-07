@@ -5,10 +5,10 @@ pubDatetime: 2025-05-24T00:54:13.000Z
 draft: false
 tags:
   - "ai"
-  - "llm"
   - "how-to"
   - "cloudflare"
-  - "rag"
+  - "machine-learning"
+  - "tinkering"
 author: "Ann Catherine Jose"
 disqusSlug: "cloudflare-autorag-step-by-step"
 ogImage: "autorag-create-select-datasource.png"

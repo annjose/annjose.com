@@ -7,6 +7,7 @@ tags:
   - "llm"
   - "how-to"
   - "ai"
+  - "chatgpt"
 author: "Ann Catherine Jose"
 disqusSlug: "gpt-4-vision-in-action"
 ogImage: "chatgpt-select-gpt-4.png"

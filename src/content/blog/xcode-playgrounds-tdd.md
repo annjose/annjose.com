@@ -6,6 +6,8 @@ draft: false
 tags:
   - "ios"
   - "mobile"
+  - "how-to"
+  - "tinkering"
 author: "Ann Catherine Jose"
 disqusSlug: "xcode-playgrounds-tdd"
 ---

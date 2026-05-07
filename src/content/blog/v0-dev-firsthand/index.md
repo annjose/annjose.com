@@ -4,8 +4,11 @@ description: "Exploring the AI-powered web application builder"
 pubDatetime: 2024-11-04T22:54:13.000Z
 draft: false
 tags:
+  - "agentic-coding"
   - "how-to"
+  - "next-js"
   - "web"
+  - "tinkering"
 author: "Ann Catherine Jose"
 disqusSlug: "v0-dev-firsthand"
 ogImage: "todo-app-v1.png"

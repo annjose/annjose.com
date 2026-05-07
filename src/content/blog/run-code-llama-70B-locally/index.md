@@ -7,6 +7,7 @@ tags:
   - "llm"
   - "how-to"
   - "ai"
+  - "tinkering"
 author: "Ann Catherine Jose"
 disqusSlug: "run-code-llama-70B-locally"
 ogImage: "ollama-terminal.png"

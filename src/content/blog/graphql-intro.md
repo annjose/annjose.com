@@ -5,7 +5,6 @@ pubDatetime: 2019-01-28T22:30:28.000Z
 draft: false
 tags:
   - "mobile"
-  - "graphql"
 author: "Ann Catherine Jose"
 disqusSlug: "graphql-intro"
 ---

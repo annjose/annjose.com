@@ -5,7 +5,7 @@ pubDatetime: 2017-05-23T10:37:57.000Z
 draft: false
 tags:
   - "mobile"
-  - "android"
+  - "conferences"
 author: "Ann Catherine Jose"
 disqusSlug: "GoogleIO-2017"
 ---

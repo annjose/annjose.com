@@ -6,7 +6,8 @@ draft: false
 tags:
   - "ai"
   - "agentic-coding"
-  - "llm"
+  - "building"
+  - "tinkering"
 author: "Ann Catherine Jose"
 disqusSlug: "claude-code-first-impressions"
 ogImage: "cmd-init-result.jpg"

@@ -5,8 +5,9 @@ pubDatetime: 2025-03-15T22:18:12.000Z
 draft: false
 tags:
   - "ai"
-  - "llm"
+  - "building"
   - "agentic-coding"
+  - "tinkering"
 author: "Ann Catherine Jose"
 disqusSlug: "vibe-coding-pomodoro-app"
 ogImage: "main-page.png"

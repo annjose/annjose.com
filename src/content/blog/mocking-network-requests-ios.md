@@ -6,6 +6,7 @@ draft: false
 tags:
   - "ios"
   - "mobile"
+  - "tinkering"
 author: "Ann Catherine Jose"
 disqusSlug: "mocking-network-requests-ios"
 ---

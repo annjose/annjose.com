@@ -4,16 +4,14 @@ const TAG_LABELS: Record<string, string> = {
   ai: "AI",
   llm: "LLM",
   rag: "RAG",
-  tdd: "TDD",
   ios: "iOS",
-  "c++": "C++",
-  graphql: "GraphQL",
   chatgpt: "ChatGPT",
   "next-js": "Next.js",
-  "how-to": "How-To",
   "edge-ai": "Edge AI",
-  "on-device-ai": "On-Device AI",
+  "how-to": "How-to",
+  "on-device-ai": "On-device AI",
   "agentic-coding": "Agentic Coding",
+  "thinking-loud": "Thinking Out Loud",
 };
 
 /** Convert a slug like "personal-growth" to "Personal Growth" */
