@@ -2,7 +2,7 @@ export const SITE = {
   website: "https://annjose.com/",
   author: "Ann Catherine Jose",
   profile: "https://annjose.com/about/",
-  desc: "Software builder and lifelong learner writing about agentic AI, hands-on coding, and building useful products.",
+  desc: "Practical notes on building software, personal growth, and how technology works, with recent explorations in agentic AI.",
   title: "Ann Catherine Jose",
   ogImage: "og-default-light.jpg",
   lightAndDarkMode: true,
