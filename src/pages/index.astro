@@ -51,20 +51,8 @@ const startHereLinks = [
       <p class="mt-2">
         Right now I’m building modern web apps with AI coding agents, experimenting with open-weights and on-device models, and learning how to use agentic workflows more effectively.
       </p>
-      {
-        // only display if at least one social link is enabled
-        SOCIALS.length > 0 && (
-          <div class="mt-4 flex max-sm:flex-col sm:items-center">
-            <div class="me-2 mb-1 whitespace-nowrap sm:mb-0">Connect with me:</div>
-            <Socials />
-          </div>
-        )
-      }
-    </section>
 
-    <section id="start-here" class="border-b border-border py-8">
-      <h2 class="text-2xl font-semibold tracking-wide">Start here</h2>
-      <div class="mt-4 grid gap-4 sm:grid-cols-3">
+      <div class="mt-6 grid gap-4 sm:grid-cols-3">
         {
           startHereLinks.map(link => (
             <a
@@ -77,6 +65,16 @@ const startHereLinks = [
           ))
         }
       </div>
+
+      {
+        // only display if at least one social link is enabled
+        SOCIALS.length > 0 && (
+          <div class="mt-6 flex max-sm:flex-col sm:items-center">
+            <div class="me-2 mb-1 whitespace-nowrap sm:mb-0">Connect with me:</div>
+            <Socials />
+          </div>
+        )
+      }
     </section>
 
     {
@@ -100,8 +98,10 @@ const startHereLinks = [
 
     {
       recentPosts.length > 0 && (
-        <section id="recent-posts" class="pt-12 pb-6">
-          <h2 class="text-2xl font-semibold tracking-wide">Recent Posts</h2>
+        <section id="recent-posts" class="pt-8 pb-6">
+          <h2 class="text-2xl font-semibold tracking-wide">
+            Recent Reflections
+          </h2>
           <ul>
             {recentPosts.map(
               (data, index) =>
@@ -114,7 +114,7 @@ const startHereLinks = [
 
     <div class="my-8 text-center">
       <LinkButton href="/blog/">
-        All Posts
+        All Reflections
         <IconArrowRight class="inline-block rtl:-rotate-180" />
       </LinkButton>
     </div>
