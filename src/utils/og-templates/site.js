@@ -1,14 +1,26 @@
 import satori from "satori";
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import { SITE } from "@/config";
 import loadGoogleFonts from "../loadGoogleFont";
 
 export default async () => {
+  const taglines = [
+    "Software builder. Lifelong learner.",
+    "Tinkering with AI under the hood.",
+  ];
+  const fontFamily = "Lato";
+  const portrait = readFileSync(
+    join(process.cwd(), "src/assets/images/ann-color-sketch-square.png")
+  ).toString("base64");
+
   return satori(
     {
       type: "div",
       props: {
         style: {
           background: "#fefbfb",
+          fontFamily,
           width: "100%",
           height: "100%",
           display: "flex",
@@ -20,75 +32,51 @@ export default async () => {
             type: "div",
             props: {
               style: {
-                position: "absolute",
-                top: "-1px",
-                right: "-1px",
-                border: "4px solid #000",
-                background: "#ecebeb",
-                opacity: "0.9",
-                borderRadius: "4px",
-                display: "flex",
-                justifyContent: "center",
-                margin: "2.5rem",
-                width: "88%",
-                height: "80%",
-              },
-            },
-          },
-          {
-            type: "div",
-            props: {
-              style: {
-                border: "4px solid #000",
+                border: "2px solid #eadceb",
                 background: "#fefbfb",
-                borderRadius: "4px",
+                borderRadius: "28px",
                 display: "flex",
                 justifyContent: "center",
-                margin: "2rem",
-                width: "88%",
-                height: "80%",
+                margin: "56px",
+                width: "1088px",
+                height: "518px",
               },
               children: {
                 type: "div",
                 props: {
                   style: {
                     display: "flex",
-                    flexDirection: "column",
+                    alignItems: "center",
                     justifyContent: "space-between",
-                    margin: "20px",
-                    width: "90%",
-                    height: "90%",
+                    width: "88%",
+                    height: "100%",
                   },
                   children: [
                     {
                       type: "div",
                       props: {
                         style: {
+                          width: "306px",
+                          height: "306px",
+                          border: "6px solid #a21caf",
+                          borderRadius: "9999px",
                           display: "flex",
-                          flexDirection: "column",
-                          justifyContent: "center",
                           alignItems: "center",
-                          height: "90%",
-                          maxHeight: "90%",
+                          justifyContent: "center",
                           overflow: "hidden",
-                          textAlign: "center",
                         },
-                        children: [
-                          {
-                            type: "p",
-                            props: {
-                              style: { fontSize: 72, fontWeight: "bold" },
-                              children: SITE.title,
+                        children: {
+                          type: "img",
+                          props: {
+                            src: `data:image/png;base64,${portrait}`,
+                            style: {
+                              width: "276px",
+                              height: "276px",
+                              borderRadius: "9999px",
+                              objectFit: "cover",
                             },
                           },
-                          {
-                            type: "p",
-                            props: {
-                              style: { fontSize: 28 },
-                              children: SITE.desc,
-                            },
-                          },
-                        ],
+                        },
                       },
                     },
                     {
@@ -96,18 +84,60 @@ export default async () => {
                       props: {
                         style: {
                           display: "flex",
-                          justifyContent: "flex-end",
-                          width: "100%",
-                          marginBottom: "8px",
-                          fontSize: 28,
+                          flexDirection: "column",
+                          justifyContent: "center",
+                          alignItems: "flex-start",
+                          height: "100%",
+                          width: "620px",
+                          overflow: "hidden",
                         },
-                        children: {
-                          type: "span",
-                          props: {
-                            style: { overflow: "hidden", fontWeight: "bold" },
-                            children: new URL(SITE.website).hostname,
+                        children: [
+                          {
+                            type: "p",
+                            props: {
+                              style: {
+                                margin: 0,
+                                color: "#18141d",
+                                fontSize: 60,
+                                fontWeight: 700,
+                              },
+                              children: SITE.title,
+                            },
                           },
-                        },
+                          {
+                            type: "div",
+                            props: {
+                              style: {
+                                display: "flex",
+                                flexDirection: "column",
+                                gap: "14px",
+                                marginTop: "32px",
+                                color: "#a21caf",
+                                fontSize: 36,
+                                fontWeight: 700,
+                              },
+                              children: taglines.map(tagline => ({
+                                type: "p",
+                                props: {
+                                  style: { margin: 0 },
+                                  children: tagline,
+                                },
+                              })),
+                            },
+                          },
+                          {
+                            type: "p",
+                            props: {
+                              style: {
+                                margin: "72px 0 0",
+                                color: "#625967",
+                                fontSize: 28,
+                                fontWeight: 700,
+                              },
+                              children: new URL(SITE.website).hostname,
+                            },
+                          },
+                        ],
                       },
                     },
                   ],
@@ -122,7 +152,23 @@ export default async () => {
       width: 1200,
       height: 630,
       embedFont: true,
-      fonts: await loadGoogleFonts(SITE.title + SITE.desc + SITE.website),
+      fonts: await loadGoogleFonts(
+        SITE.title + taglines.join("") + SITE.website,
+        [
+          {
+            name: fontFamily,
+            font: "Lato",
+            weight: 400,
+            style: "normal",
+          },
+          {
+            name: fontFamily,
+            font: "Lato",
+            weight: 700,
+            style: "bold",
+          },
+        ]
+      ),
     }
   );
 };

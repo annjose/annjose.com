@@ -30,11 +30,8 @@ async function loadGoogleFont(
 }
 
 async function loadGoogleFonts(
-  text: string
-): Promise<
-  Array<{ name: string; data: ArrayBuffer; weight: number; style: string }>
-> {
-  const fontsConfig = [
+  text: string,
+  fontsConfig = [
     {
       name: "IBM Plex Mono",
       font: "IBM+Plex+Mono",
@@ -47,8 +44,10 @@ async function loadGoogleFonts(
       weight: 700,
       style: "bold",
     },
-  ];
-
+  ]
+): Promise<
+  Array<{ name: string; data: ArrayBuffer; weight: number; style: string }>
+> {
   const fonts = await Promise.all(
     fontsConfig.map(async ({ name, font, weight, style }) => {
       const data = await loadGoogleFont(font, text, weight);
