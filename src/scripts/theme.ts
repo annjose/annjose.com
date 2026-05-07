@@ -63,7 +63,9 @@ function reflectPreference(): void {
   document.firstElementChild?.setAttribute("data-theme", themeValue);
   document.firstElementChild?.setAttribute("data-palette", paletteValue);
 
-  document.querySelector("#theme-btn")?.setAttribute("aria-label", themeValue);
+  document
+    .querySelectorAll(".theme-btn")
+    .forEach(btn => btn.setAttribute("aria-label", themeValue));
 
   const paletteSelect =
     document.querySelector<HTMLSelectElement>("#palette-select");
@@ -124,10 +126,12 @@ function setThemeFeature(): void {
   reflectPreference();
 
   // now this script can find and listen for clicks on the control
-  document.querySelector("#theme-btn")?.addEventListener("click", () => {
-    themeValue = themeValue === LIGHT ? DARK : LIGHT;
-    window.theme?.setTheme(themeValue);
-    setPreference();
+  document.querySelectorAll(".theme-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      themeValue = themeValue === LIGHT ? DARK : LIGHT;
+      window.theme?.setTheme(themeValue);
+      setPreference();
+    });
   });
 
   const paletteSelect =
