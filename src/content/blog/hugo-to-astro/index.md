@@ -9,7 +9,7 @@ tags:
   - "cloudflare"
   - "building"
 author: "Ann Catherine Jose"
-ogImage: "after-astro-home-light.png"
+ogImage: "before-after-about-page.png"
 ---
 
 For the last few weeks, I have been redesigning and migrating my personal website [annjose.com](https://annjose.com) (where you are reading this now) to a new blog engine. It started as a simple migration, but then (surprise, surprise!) ballooned into a big project with redesign, redeployment, content cleanup, comments migration, and adding modern features that were missing. My favorite part - this turned out to be a **real-world agentic coding** project. 
