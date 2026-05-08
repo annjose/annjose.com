@@ -215,5 +215,34 @@ const structuredData = pubDatetime
 
     <!-- Load full theme logic -->
     <script src="../scripts/theme.ts"></script>
+    <script>
+      function openExternalProseLinksInNewTabs() {
+        const links = document.querySelectorAll(".app-prose a[href]");
+
+        links.forEach(link => {
+          const href = link.getAttribute("href");
+          if (!href) return;
+
+          const url = new URL(href, window.location.href);
+          const isExternal =
+            ["http:", "https:"].includes(url.protocol) &&
+            url.origin !== window.location.origin;
+
+          if (!isExternal) return;
+
+          link.setAttribute("target", "_blank");
+
+          const rel = new Set((link.getAttribute("rel") ?? "").split(/\s+/));
+          rel.add("noopener");
+          rel.add("noreferrer");
+          link.setAttribute("rel", Array.from(rel).filter(Boolean).join(" "));
+        });
+      }
+
+      document.addEventListener(
+        "astro:page-load",
+        openExternalProseLinksInNewTabs,
+      );
+    </script>
   </body>
 </html>
