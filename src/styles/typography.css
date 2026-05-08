@@ -52,6 +52,11 @@
     }
 
     table {
+      &:has(td img) {
+        table-layout: fixed;
+        width: 100%;
+      }
+
       th,
       td {
         @apply border border-border p-2;
