@@ -24,7 +24,7 @@ const { frontmatter } = Astro.props;
     {frontmatter.description && (
       <p class="mt-2 mb-6 italic text-muted">{frontmatter.description}</p>
     )}
-    <article class="app-prose mt-6 prose-img:border-0">
+    <article class="app-prose mt-6 max-w-none prose-img:border-0">
       <slot />
     </article>
   </main>
