@@ -35,7 +35,7 @@ dist/
 .hugo_build.lock
 resources/_gen/
 
-.claude/launch.json
+.claude/
 public/pagefind/
 .astro/
 .lighthouseci/
